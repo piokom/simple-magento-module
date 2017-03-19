@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Piokom_Report>
+      <version>0.0.1</version>
+    </Piokom_Report>
+  </modules>
+
+  <global>
+    <models>
+      <piokom_report>
+        <class>Piokom_Report_Model</class>
+        <resourceModel>piokom_report_resource</resourceModel>
+      </piokom_report>
+
+      <piokom_report_resource>
+        <class>Piokom_Report_Model_Resource</class>
+        <entities>
+          <report>
+            <table>piokom_report</table>
+          </report>
+        </entities>
+      </piokom_report_resource>
+    </models>
+
+    <resources>
+      <piokom_report_setup>
+        <setup>
+          <module>Piokom_Report</module>
+        </setup>
+      </piokom_report_setup>
+    </resources>
+
+    <blocks>
+      <piokom_report>
+        <class>Piokom_Report_Block</class>
+      </piokom_report>
+    </blocks>
+
+    <helpers>
+      <piokom_report>
+        <class>Piokom_Report_Helper</class>
+      </piokom_report>
+    </helpers>
+
+    <events>
+      <catalog_controller_product_init_after>
+        <observers>
+          <piokom_report>
+            <type>model</type>
+            <class>piokom_report/observer</class>
+            <method>saveUserPresenceOnPage</method>
+          </piokom_report>
+        </observers>
+      </catalog_controller_product_init_after>
+    </events>
+  </global>
+
+  <admin>
+    <routers>
+      <adminhtml>
+        <args>
+          <modules>
+            <piokom_report before="Mage_Adminhtml">Piokom_Report_Adminhtml</piokom_report>
+          </modules>
+        </args>
+      </adminhtml>
+    </routers>
+  </admin>
+</config>

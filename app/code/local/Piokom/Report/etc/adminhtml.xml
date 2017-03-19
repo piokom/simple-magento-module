@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+  <menu>
+    <sales>
+      <children>
+        <piokom_report translate="title" module="piokom_report">
+          <title>Report</title>
+          <action>adminhtml/report</action>
+        </piokom_report>
+      </children>
+    </sales>
+  </menu>
+</config>
