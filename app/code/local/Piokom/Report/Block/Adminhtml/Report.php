@@ -8,6 +8,6 @@ class Piokom_Report_Block_Adminhtml_Report extends Mage_Adminhtml_Block_Widget_G
     $this->_headerText = Mage::helper('piokom_report')->__('Report');
 
     parent::__construct();
-    $this->_removeButton('add')
+    $this->_removeButton('add');
   }
 }
