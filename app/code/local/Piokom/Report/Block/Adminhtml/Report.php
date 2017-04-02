@@ -1,4 +1,5 @@
 <?php
+/* This class is not necessary (optional) */
 class Piokom_Report_Block_Adminhtml_Report extends Mage_Adminhtml_Block_Widget_Grid_Container
 {
   public function __construct()
